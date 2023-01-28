@@ -166,6 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33726416}
   - component: {fileID: 33726415}
+  - component: {fileID: 33726417}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -201,6 +202,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &33726417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33726414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAACQn+tKkAxboQIAAKEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtVG1v2jAQ/ivIn9eJZKjAvm3Q0k1qi8qmfhj9YOILsXDsyC8FWvHfd+ckTWCTkGKee+58z734nUntKsi8sQsrxb0RwL4OGJ3Zp0FnvIMD3xq9km/Qcp6l8AWReOQ8cS8N4gm5OVOCtzL7preKyEMEg5a5seWN2MLMOO8QzrlygCZrPHlrhN4H7ICfqym5HPGUjun0hqfpcHDCYwbag+2ok6RhJtcNseYFnSleViAo6Y6eDtvIybAmahTUcChUZpSSrsmG+WMV1c545QJqQYKQHNXFFIhfgNwWniL3nR/z3IFvpFt+nEuLRaqjsu+mrlzJ3a7O7JWrQPeM05hSHfP+H/NVEs25NeVde20SBflCZrsnfsy4873K9uH5ed5B77na8Y2C5wL0g1lYE7RAo7eBXIODdN79/VA2KyDbdXid6gUYqq7gbbnbNpKGUxR/mClZbsj0eVQDK2ViuWP3wWJjfmDCcTZcEwJRyuK3g1982x+ixnArrfNoalRqSm9jgiUqu8UDFT4Lfmashog2OVegufLHJUbxlw28sPVuvbDcctqW5u7G1i7BhUuEO/5weGFamn3XKwc/Q1ktjdR+BdxmRS+eK8z+HlzxGLySGjpFZHjAGs6M1vXwuf+4rYLNedZz83DwwcKcex5XAHPCIRF9Vyxj9NBBKZrHqIKC/0EV9HuhIhcc71URZg9Gx+U5+77QHGyDFOdTzobXfDJN0nwyFqPRaJxeAYhROp0kkxw2X0Y8ZXENpMaac7Wsi9a0Cgeo3x+NM9++aIOF5VVcPGH5fiHfStPrv9S5WWUWQD+eh3Bg8RZ8IMSNkKhzBd5LHWePva+ZMtkOxPoj0DpW9ubgLV93Udaskq/GE7Jms/iErRnBH3u1tPAqYU+Xt8FO7PQXUEsDBBQAAAgIAACQn+upClddbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jO00FFQSi9KLMgoBooYgjilmSkgdrSSgVmihaWhUZqFeYqJiYm5kW5qaoqJkaWFoUVaapKxSaKRUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+tKkAxboQIAAKEFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+upClddbQAAAHgAAAAJACQAAAAAAAAAAAAAAO4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAApgMAAAAA
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
 --- !u!1 &47907014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,6 +1169,10 @@ PrefabInstance:
     - target: {fileID: 1309553747650715660, guid: 53490e0c02f720a48b1ba8b46c160787, type: 3}
       propertyPath: m_Name
       value: Mettle Slowps (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309553747650715660, guid: 53490e0c02f720a48b1ba8b46c160787, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1309553747650715660, guid: 53490e0c02f720a48b1ba8b46c160787, type: 3}
       propertyPath: m_IsActive
@@ -2725,6 +2785,10 @@ PrefabInstance:
     - target: {fileID: 1309553747650715660, guid: 53490e0c02f720a48b1ba8b46c160787, type: 3}
       propertyPath: m_Name
       value: Mettle Slowps (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309553747650715660, guid: 53490e0c02f720a48b1ba8b46c160787, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1309553747650715660, guid: 53490e0c02f720a48b1ba8b46c160787, type: 3}
       propertyPath: m_IsActive
@@ -5571,7 +5635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 975314385}
   - component: {fileID: 975314386}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5740,6 +5804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piller Block (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5745200237967608749, guid: 958b6d582a8f9044ba2bb0de883e71cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5745200237967608750, guid: 958b6d582a8f9044ba2bb0de883e71cd, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -5904,6 +5972,10 @@ PrefabInstance:
     - target: {fileID: 2363441525349798388, guid: 814372adead388547ad3cf9bb99cd5f4, type: 3}
       propertyPath: m_Name
       value: Dirt Block (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363441525349798388, guid: 814372adead388547ad3cf9bb99cd5f4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814372adead388547ad3cf9bb99cd5f4, type: 3}
@@ -6500,7 +6572,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1070421446}
   - component: {fileID: 1070421447}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6616,6 +6688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dirt Block (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2363441525349798388, guid: 814372adead388547ad3cf9bb99cd5f4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814372adead388547ad3cf9bb99cd5f4, type: 3}
 --- !u!1 &1080186568 stripped
@@ -6664,6 +6740,10 @@ PrefabInstance:
     - target: {fileID: 5745200237967608749, guid: 958b6d582a8f9044ba2bb0de883e71cd, type: 3}
       propertyPath: m_Name
       value: Piller Block (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745200237967608749, guid: 958b6d582a8f9044ba2bb0de883e71cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5745200237967608750, guid: 958b6d582a8f9044ba2bb0de883e71cd, type: 3}
       propertyPath: m_FlipX
@@ -6774,7 +6854,7 @@ GameObject:
   - component: {fileID: 1085009695}
   - component: {fileID: 1085009696}
   - component: {fileID: 1085009697}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8909,6 +8989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piller Block (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5745200237967608749, guid: 958b6d582a8f9044ba2bb0de883e71cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5745200237967608750, guid: 958b6d582a8f9044ba2bb0de883e71cd, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -9665,7 +9749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1411313748}
   - component: {fileID: 1411313749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sptie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10238,7 +10322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495075901}
   - component: {fileID: 1495075902}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11277,6 +11361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dirt Block (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2363441525349798388, guid: 814372adead388547ad3cf9bb99cd5f4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814372adead388547ad3cf9bb99cd5f4, type: 3}
 --- !u!1 &1583702718 stripped
@@ -12033,6 +12121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piller Block (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5745200237967608749, guid: 958b6d582a8f9044ba2bb0de883e71cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5745200237967608750, guid: 958b6d582a8f9044ba2bb0de883e71cd, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -12672,6 +12764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dirt Block (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2363441525349798388, guid: 814372adead388547ad3cf9bb99cd5f4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814372adead388547ad3cf9bb99cd5f4, type: 3}
 --- !u!1001 &1721066408
@@ -12905,7 +13001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727876637}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.5, y: 21, z: 0}
+  m_LocalPosition: {x: 26, y: 21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12956,7 +13052,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 11}
+  m_Size: {x: 1, y: 10.5}
   m_EdgeRadius: 0
 --- !u!212 &1727876640
 SpriteRenderer:
@@ -14433,7 +14529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1939493198}
   - component: {fileID: 1939493199}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
