@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PlayerNameSpace;
+using Pathfinding;
 
 namespace Enemeys
 {
@@ -11,24 +12,28 @@ namespace Enemeys
         [SerializeField] private GameObject bolletPrefab;
         [SerializeField] private Transform[] moveTransforms;
 
+        private bool hasSeenPlayer;
         private bool isAttacking;
         private bool isShooting;
         private int currentMoveTranssformNumber;
         private float rotationOffset = 180;
         private Transform turentTransform;
         private Transform playerTransform;
+        private AIPath aiPath;
 
         private void Start()
         {
+            aiPath = GetComponent<AIPath>();
             turentTransform = transform.GetChild(1);
         }
 
         private void Update()
         {
-            if (isAttacking && !isShooting)
+            if (isAttacking && !isShooting && hasSeenPlayer)
             {
                 turentTransform.rotation = LookAt(rotationOffset, turentTransform);
             }
+            else if (hasSeenPlayer) MoveTowardsPlayer();
             else Move();
         }
 
@@ -47,8 +52,8 @@ namespace Enemeys
         private void Move()
         {
             Transform currentMovePoint = moveTransforms[currentMoveTranssformNumber];
-            float minDistanceAwayFromMovePoint = 0.2f;
-            if (Vector3.Distance(transform.position, currentMovePoint.position) <= minDistanceAwayFromMovePoint)
+            float pointRechedDistance = 0.2f;
+            if (Vector3.Distance(transform.position, currentMovePoint.position) <= pointRechedDistance)
             {
                 currentMoveTranssformNumber++;
                 if (currentMoveTranssformNumber >= moveTransforms.Length)
@@ -57,12 +62,18 @@ namespace Enemeys
                     return;
                 }
             }
-            Vector3 moveDirection = (currentMovePoint.position - transform.position);
-            transform.position += moveDirection.normalized * speed * Time.deltaTime;
+            aiPath.destination = currentMovePoint.position;
+        }
+
+        private void MoveTowardsPlayer()
+        {
+            float yOffset = 8;
+            aiPath.destination = playerTransform.position + new Vector3(0, yOffset);
         }
 
         private IEnumerator AttackSequence()
         {
+            hasSeenPlayer = true;
             isAttacking = true;
 
             float timeTillStartShooting = 3f;

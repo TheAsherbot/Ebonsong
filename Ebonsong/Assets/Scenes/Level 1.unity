@@ -216,7 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACQn+tKkAxboQIAAKEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtVG1v2jAQ/ivIn9eJZKjAvm3Q0k1qi8qmfhj9YOILsXDsyC8FWvHfd+ckTWCTkGKee+58z734nUntKsi8sQsrxb0RwL4OGJ3Zp0FnvIMD3xq9km/Qcp6l8AWReOQ8cS8N4gm5OVOCtzL7preKyEMEg5a5seWN2MLMOO8QzrlygCZrPHlrhN4H7ICfqym5HPGUjun0hqfpcHDCYwbag+2ok6RhJtcNseYFnSleViAo6Y6eDtvIybAmahTUcChUZpSSrsmG+WMV1c545QJqQYKQHNXFFIhfgNwWniL3nR/z3IFvpFt+nEuLRaqjsu+mrlzJ3a7O7JWrQPeM05hSHfP+H/NVEs25NeVde20SBflCZrsnfsy4873K9uH5ed5B77na8Y2C5wL0g1lYE7RAo7eBXIODdN79/VA2KyDbdXid6gUYqq7gbbnbNpKGUxR/mClZbsj0eVQDK2ViuWP3wWJjfmDCcTZcEwJRyuK3g1982x+ixnArrfNoalRqSm9jgiUqu8UDFT4Lfmashog2OVegufLHJUbxlw28sPVuvbDcctqW5u7G1i7BhUuEO/5weGFamn3XKwc/Q1ktjdR+BdxmRS+eK8z+HlzxGLySGjpFZHjAGs6M1vXwuf+4rYLNedZz83DwwcKcex5XAHPCIRF9Vyxj9NBBKZrHqIKC/0EV9HuhIhcc71URZg9Gx+U5+77QHGyDFOdTzobXfDJN0nwyFqPRaJxeAYhROp0kkxw2X0Y8ZXENpMaac7Wsi9a0Cgeo3x+NM9++aIOF5VVcPGH5fiHfStPrv9S5WWUWQD+eh3Bg8RZ8IMSNkKhzBd5LHWePva+ZMtkOxPoj0DpW9ubgLV93Udaskq/GE7Jms/iErRnBH3u1tPAqYU+Xt8FO7PQXUEsDBBQAAAgIAACQn+upClddbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jO00FFQSi9KLMgoBooYgjilmSkgdrSSgVmihaWhUZqFeYqJiYm5kW5qaoqJkaWFoUVaapKxSaKRUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+tKkAxboQIAAKEFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+upClddbQAAAHgAAAAJACQAAAAAAAAAAAAAAO4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAApgMAAAAA
+    dataString: UEsDBBQAAAgIAACQn+uNYSPypgIAAKIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtVF1v2jAU/SvIz6NKMlZgb1to6Sa1RWVTH5Y+mPiGWDh25I8Crfjvu3YSkrJJSDHnnvtxru/1O+HS1JBbpZeas3vFgHwdEX8mn0a98Q4OdKvkmr9Bx3nmzJaeRAPniVquEI+9m1EVWM3zb3IrPDlC0EleKF3dsC2kyliDcEGFATRpZb23ROh9RA74Gc+9yxFPydSf3vA0j0YnPOYgLeieOotbZnzdEhuek7mgVQ3MF93Tk6iLHEcNUaKgluND5UoIbtpqiD3WQW1Ka+NQCxIYp6gulBBffUGgBL4trY89dH8sCgO2Fa/pccE1tqmJS76rpncVNbumtlcqnM80TUJRTcz7f8zjOJgLraq7Lm0cJNmS57snesypsYPeDuHFoPLQoT0VO7oR8FyCfFBLrZxkaLTaeVdnIFn0f8/K0hLyXY83pV6Aru5b3jW8u0iv4RTEH1LBq403XU0aYC1UaHi4f9B4NT+w4DAdpi0bUV/FbwO/6HY4Rq3hlmtj0dTSpS9vo5z2VHKLB9/43NlUaQkBbWuuQVJhjyuMYi8v8MI2yHphuaV+X9rcra1bgwuXAPf8KLowrdS+vysDP11VrxSXdg1U5+UgninV/h5M+eis4BJ6Rd7wgD1MlZTN8Jn/uK2dLmg+cLNwsE7DgloalgBrwiFhQ1dsY/CQTgg/j0GFD/4HVfjfi29ySTGvCDB5UDKsz4fvi5+DrePs45ST6JrO5nFSzKZsMplMkzEAmyTzWTwrYPN5QhMS1oBL7DkVq6Zp7VXhAMlei8SR75600VLTOuwd03S/5G+VGlw/l4Va5xpAPjYRzmJBYxJ8IdgN4yhzDdZyGUaPvGdEqHwHLDsHykJjbw5W06yPkpGavyrrkYyk4Q3LiIfPa7XS8Mph75N3wU7k9BdQSwMEFAAACAgAAJCf66kKV11tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSM7TQUVBKL0osyCgGihiCOKWZKSB2tJKBWaKFpaFRmoV5iomJibmRbmpqiomRpYWhRVpqkrFJopFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJCf641hI/KmAgAAogUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJCf66kKV11tAAAAeAAAAAkAJAAAAAAAAAAAAAAA8wIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAACrAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -229,7 +229,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -244,11 +244,43 @@ MonoBehaviour:
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors:
     - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -15816,10 +15848,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1669783834}
     m_Modifications:
-    - target: {fileID: 21793493484354719, guid: 069d04ec5b07fea49888db7e21b2003b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 21793494149780634, guid: 069d04ec5b07fea49888db7e21b2003b, type: 3}
       propertyPath: m_Name
       value: Enemy A 1
@@ -15868,18 +15896,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 21793494833633707, guid: 069d04ec5b07fea49888db7e21b2003b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1718654397628857989, guid: 069d04ec5b07fea49888db7e21b2003b, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1718654397628857989, guid: 069d04ec5b07fea49888db7e21b2003b, type: 3}
-      propertyPath: moveTransforms.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1718654397628857989, guid: 069d04ec5b07fea49888db7e21b2003b, type: 3}
       propertyPath: moveTransforms.Array.data[0]
       value: 
@@ -15888,10 +15904,6 @@ PrefabInstance:
       propertyPath: moveTransforms.Array.data[1]
       value: 
       objectReference: {fileID: 1395639102}
-    - target: {fileID: 1718654397628857989, guid: 069d04ec5b07fea49888db7e21b2003b, type: 3}
-      propertyPath: moveTransforms.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 069d04ec5b07fea49888db7e21b2003b, type: 3}
 --- !u!1001 &1469911046949121934
