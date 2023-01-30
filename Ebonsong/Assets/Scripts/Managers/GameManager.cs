@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
         get;
         private set;
     }
+    public int playerLives = 3;
 
     [SerializeField] private GameObject pausedMenuObject;
 
@@ -30,6 +31,17 @@ public class GameManager : MonoBehaviour
         inputActions.GlobleKeys.PauseUnpause.performed += PauseUnpause_performed;
     }
 
+    public void RestartLevel()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadSceneAsync(scene.buildIndex);
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     private void PauseUnpause_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         if (isCurrentlyPasued)
@@ -44,11 +56,6 @@ public class GameManager : MonoBehaviour
         }
 
         isCurrentlyPasued = !isCurrentlyPasued;
-    }
-
-    public void GameOver()
-    {
-        SceneManager.LoadScene(0);
     }
 
 }

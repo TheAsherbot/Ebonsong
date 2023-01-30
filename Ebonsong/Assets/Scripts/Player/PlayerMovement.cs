@@ -104,7 +104,7 @@ namespace PlayerNameSpace
 
         private void CheckIfIsJumping()
         {
-        if (rigidbody.velocity.y <= 0.0f)
+            if (rigidbody.velocity.y <= 0.0f)
             {
                 isJumping = false;
             }
@@ -215,7 +215,7 @@ namespace PlayerNameSpace
             }
             else
             {
-                rigidbody.velocity = new Vector2(rigidbody.velocity.x * 0.9f, 0);
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x / 2, 0);
             }
         }
 
@@ -230,9 +230,9 @@ namespace PlayerNameSpace
             {
                 if (rigidbody.velocity.y > 0.1f)
                 {
-                    rigidbody.velocity = new Vector2(rigidbody.velocity.x * 0.9f, 0);
+                    rigidbody.velocity = new Vector2(rigidbody.velocity.x / 2, 0);
                 }
-                rigidbody.velocity = new Vector2(rigidbody.velocity.x * 0.9f, rigidbody.velocity.y);
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x / 2, rigidbody.velocity.y);
             }
         }
 
@@ -245,7 +245,7 @@ namespace PlayerNameSpace
             }
             else
             {
-                rigidbody.velocity = new Vector2(rigidbody.velocity.x * 0.9f, rigidbody.velocity.y);
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x / 2, rigidbody.velocity.y);
             }
         }
 
@@ -262,7 +262,7 @@ namespace PlayerNameSpace
             {
                 xVelocity = 6f;
             }
-            else if (xInput <= 0.1f)
+            else if (xInput <= -0.1f)
             {
                 xVelocity = 0f;
                 yVelocity = -2f;

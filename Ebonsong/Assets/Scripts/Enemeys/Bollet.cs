@@ -1,20 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using PlayerNameSpace;
 
-public class Bollet : MonoBehaviour
+namespace Enemies
 {
-    private int lifeTime = 5;
-    private float speed = 10f;
-
-    void Update()
+    public class Bollet : MonoBehaviour
     {
-        Destroy(gameObject, lifeTime);
-        transform.localPosition += -transform.right * speed * Time.deltaTime;
-    }
+        [SerializeField] private int damage;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(this.gameObject);
+        private int lifeTime = 5;
+        private float speed = 10f;
+
+        void Update()
+        {
+            Destroy(gameObject, lifeTime);
+            transform.localPosition += -transform.right * speed * Time.deltaTime;
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.GetComponent<PlayerHealth>())
+            {
+                collision.gameObject.GetComponent<PlayerHealth>().Damage(damage);
+            }
+            Destroy(this.gameObject);
+        }
     }
 }

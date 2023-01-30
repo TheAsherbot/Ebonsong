@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 namespace PlayerNameSpace
 {
@@ -7,8 +8,9 @@ namespace PlayerNameSpace
     {
         [SerializeField] private int maleHPMax = 10;
         [SerializeField] private int femaleHPMax = 15;
+        [SerializeField] private TextMeshProUGUI maleHPText;
+        [SerializeField] private TextMeshProUGUI femaleHPText;
 
-        private int lives = 3;
         private int maleHP;
         private int femaleHP;
 
@@ -23,6 +25,7 @@ namespace PlayerNameSpace
         {
             maleHP = maleHPMax;
             femaleHP = femaleHPMax;
+            SetHpText();
         }
 
         public void Heal(int healAmount)
@@ -43,6 +46,7 @@ namespace PlayerNameSpace
                     femaleHP = femaleHPMax;
                 }
             }
+            SetHpText();
         }
 
         public void Damage(int damageAmount)
@@ -52,7 +56,8 @@ namespace PlayerNameSpace
                 maleHP -= damageAmount;
                 if (maleHP <= 0) 
                 {
-                    lives--;
+                    GameManager.Instance.playerLives--;
+                    GameManager.Instance.RestartLevel();
                 }
             }
             else
@@ -60,19 +65,28 @@ namespace PlayerNameSpace
                 femaleHP -= damageAmount;
                 if (femaleHP <= 0)
                 {
-                    lives--;
+                    GameManager.Instance.playerLives--;
+                    GameManager.Instance.RestartLevel();
                 }
             }
 
-            if (lives <= 0)
+            if (GameManager.Instance.playerLives <= 0)
             {
                 GameManager.Instance.GameOver();
             }
+
+            SetHpText();
         }
 
         public void AddLives(int addAmount)
         {
-            lives += addAmount;
+            GameManager.Instance.playerLives += addAmount;
+        }
+
+        private void SetHpText()
+        {
+            maleHPText.text = "" + maleHP + " / " + maleHPMax;
+            femaleHPText.text = "" + femaleHP + " / " + femaleHPMax;
         }
 
     }

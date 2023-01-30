@@ -17,18 +17,10 @@ public class Door : MonoBehaviour
         if (isOpening == true)
         {
             topSprite.localScale -= new Vector3(0, 1) * Time.deltaTime;
-            if (topSprite.localScale.y < 0)
-            {
-                topSprite.localScale = Vector3.zero;
-            }
             bottumSprite.localScale += new Vector3(0, 1) * Time.deltaTime;
-            if (bottumSprite.localScale.y > 0)
+            if (bottumSprite.localScale.y >= 0 || topSprite.localScale.y <= 0)
             {
-                bottumSprite.localScale = Vector3.zero;
-            }
-            if (bottumSprite.localScale.y == 0 && topSprite.localScale.y == 0)
-            {
-                isOpening = false;
+                DestroyImmediate(this.gameObject);
             }
         }
     }
@@ -37,10 +29,4 @@ public class Door : MonoBehaviour
     {
         isOpening = true;
     }
-
-    public void CloseDoors()
-    {
-
-    }
-    
 }

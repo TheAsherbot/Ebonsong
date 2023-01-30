@@ -1,40 +1,39 @@
+using Pathfinding;
+using PlayerNameSpace;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PlayerNameSpace;
-using Pathfinding;
 
-namespace Enemeys
+namespace Enemies
 {
-    public class EnemeyA : MonoBehaviour
+    public class EnemyB : MonoBehaviour
     {
-        [SerializeField] private int speed = 10;
-        [SerializeField] private GameObject bolletPrefab;
-        [SerializeField] private Transform[] moveTransforms;
 
-        private bool hasSeenPlayer;
+        [SerializeField] private GameObject bolletPrefab;
+
         private bool isAttacking;
         private bool isShooting;
-        private int currentMoveTranssformNumber;
         private float rotationOffset = 180;
         private Transform turentTransform;
         private Transform playerTransform;
-        private AIPath aiPath;
+        private Quaternion rotation180 = Quaternion.Euler(0, 0, 180);
 
         private void Start()
         {
-            aiPath = GetComponent<AIPath>();
-            turentTransform = transform.GetChild(1);
+            turentTransform = transform.GetChild(2).GetChild(0);
         }
 
         private void Update()
         {
-            if (isAttacking && !isShooting && hasSeenPlayer)
+            if (isAttacking && !isShooting)
             {
                 turentTransform.rotation = LookAt(rotationOffset, turentTransform);
             }
-            else if (hasSeenPlayer) MoveTowardsPlayer();
-            else Move();
+        }
+
+        private void LateUpdate()
+        {
+            CerectTurretRotation();
         }
 
         private void OnTriggerStay2D(Collider2D collision)
@@ -49,31 +48,20 @@ namespace Enemeys
             }
         }
 
-        private void Move()
+        private void CerectTurretRotation()
         {
-            Transform currentMovePoint = moveTransforms[currentMoveTranssformNumber];
-            float pointRechedDistance = 0.2f;
-            if (Vector3.Distance(transform.position, currentMovePoint.position) <= pointRechedDistance)
+            if (turentTransform.rotation.eulerAngles.z > 0 && turentTransform.rotation.eulerAngles.z < 90)
             {
-                currentMoveTranssformNumber++;
-                if (currentMoveTranssformNumber >= moveTransforms.Length)
-                {
-                    currentMoveTranssformNumber = 0;
-                    return;
-                }
+                turentTransform.rotation = Quaternion.identity;
             }
-            aiPath.destination = currentMovePoint.position;
-        }
-
-        private void MoveTowardsPlayer()
-        {
-            float yOffset = 8;
-            aiPath.destination = playerTransform.position + new Vector3(0, yOffset);
+            else if (turentTransform.rotation.eulerAngles.z < 180 && turentTransform.rotation.eulerAngles.z > 90)
+            {
+                turentTransform.rotation = rotation180;
+            }
         }
 
         private IEnumerator AttackSequence()
         {
-            hasSeenPlayer = true;
             isAttacking = true;
 
             float timeTillStartShooting = 3f;
@@ -99,6 +87,5 @@ namespace Enemeys
             }
             return Quaternion.identity;
         }
-    
     }
 }
