@@ -903,6 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e424564d8cea23f4fa8f299631775944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLookingRight: 0
   maleBase: {fileID: 7721863543996642640}
   femaleBase: {fileID: 7721863543349729845}
   maleSword: {fileID: 6035160184591234380}

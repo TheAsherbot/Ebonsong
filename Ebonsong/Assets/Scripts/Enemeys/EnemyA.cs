@@ -95,7 +95,7 @@ namespace Enemies
         {
             hasSeenPlayer = true;
             isAttacking = true;
-
+;
             float timeTillStartShooting = 3f;
             yield return new WaitForSeconds(timeTillStartShooting);
 

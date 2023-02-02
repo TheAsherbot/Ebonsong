@@ -20,7 +20,9 @@ public class Door : MonoBehaviour
             bottumSprite.localScale += new Vector3(0, 1) * Time.deltaTime;
             if (bottumSprite.localScale.y >= 0 || topSprite.localScale.y <= 0)
             {
-                DestroyImmediate(this.gameObject);
+                AstarPath.active.Scan();
+                Debug.Log(5);
+                Destroy(this.gameObject);
             }
         }
     }

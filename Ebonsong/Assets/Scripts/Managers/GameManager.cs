@@ -3,20 +3,27 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public int playerLives = 3;
+
+    public bool DamageWithSwordMethed1
+    {
+        get;
+        private set;
+    }
     public static GameManager Instance
     {
         get;
         private set;
     }
-    public int playerLives = 3;
-
-    [SerializeField] private GameObject pausedMenuObject;
 
     private bool isCurrentlyPasued;
+    private GameObject pausedMenuObject;
     private PlayerInputActions inputActions;
 
     private void Start()
     {
+        pausedMenuObject = GameObject.Find("Canvas").transform.GetChild(0).gameObject;
+        DamageWithSwordMethed1 = false;
         if (Instance != null)
         {
             DestroyImmediate(gameObject);
@@ -40,6 +47,16 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void ChoseMethed1()
+    {
+        DamageWithSwordMethed1 = true;
+    }
+
+    public void ChoseMethed2()
+    {
+        DamageWithSwordMethed1 = false;
     }
 
     private void PauseUnpause_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
