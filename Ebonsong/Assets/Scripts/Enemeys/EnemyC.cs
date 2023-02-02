@@ -86,18 +86,18 @@ namespace Enemies
             {
                 Vector3 destination = new Vector3(playerTransform.position.x, transform.position.y, 0);
                 aiPath.destination = destination;
-                if (transform.position.x - playerTransform.position.x < 0 && isShooting == false)
-                {
-                    transform.rotation = y180Rotation;
-                }
-                else if (transform.position.x - playerTransform.position.x > 0 && isShooting == false)
-                {
-                    transform.rotation = Quaternion.identity;
-                }
             }
             else
             {
                 aiPath.destination = transform.position;
+            }
+            if (transform.position.x - playerTransform.position.x < 0 && isShooting == false)
+            {
+                transform.rotation = y180Rotation;
+            }
+            else if (transform.position.x - playerTransform.position.x > 0 && isShooting == false)
+            {
+                transform.rotation = Quaternion.identity;
             }
         }
 

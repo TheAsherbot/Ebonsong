@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 namespace PlayerNameSpace
 {
@@ -18,33 +19,62 @@ namespace PlayerNameSpace
         
         [SerializeField] private GameObject maleBase;
         [SerializeField] private GameObject femaleBase;
-        
+        [SerializeField] private GameObject maleSword;
+        [SerializeField] private GameObject femaleSword;
+
+        private GameObject rightArm;
 
         private void Awake()
         {
             IsMale = true;
             femaleBase.SetActive(false);
+            rightArm = maleSword.transform.parent.gameObject;
             InputActions = new PlayerInputActions();
             InputActions.AllTerain.Enable();
             InputActions.LandMovement.Enable();
             InputActions.AllTerain.ChangeForm.performed += ChangeForm;
+        }
 
+        public void SetSwordActive()
+        {
+            rightArm.SetActive(true);
+            maleSword.SetActive(IsMale);
+            femaleSword.SetActive(!IsMale);
+        }
+        
+        public void SetSwordInactive()
+        {
+            rightArm.SetActive(false);
         }
 
         private void ChangeForm(InputAction.CallbackContext context)
         {
             if (IsMale == true)
             {
-                IsMale = !IsMale;
-                maleBase.SetActive(false);
-                femaleBase.SetActive(true);
+                ChangeToFemale();
             }
             else
             {
-                IsMale = !IsMale;
-                maleBase.SetActive(true);
-                femaleBase.SetActive(false);
+                ChangeToMale();
             }
+        }
+
+        private void ChangeToFemale()
+        {
+            IsMale = false;
+            maleBase.SetActive(IsMale);
+            femaleBase.SetActive(!IsMale);
+            maleSword.SetActive(IsMale);
+            femaleSword.SetActive(!IsMale);
+        }
+
+        private void ChangeToMale()
+        {
+            IsMale = true;
+            maleBase.SetActive(IsMale);
+            femaleBase.SetActive(!IsMale);
+            maleSword.SetActive(IsMale);
+            femaleSword.SetActive(!IsMale);
         }
 
     }

@@ -81,8 +81,9 @@ namespace PlayerNameSpace
         {
             if (moveDirection.y > .1f)
             {
+                player.SetSwordInactive();
                 rigidbody.velocity = Vector2.zero;
-                transform.position += CurrentAthleticsModifyer * speed * Time.deltaTime * new Vector3(0, moveDirection.y);
+                transform.position += CurrentAthleticsModifyer * this.speed * Time.deltaTime * new Vector3(0, moveDirection.y);
             }
         }
 
@@ -93,6 +94,7 @@ namespace PlayerNameSpace
             {
                 rigidbody.AddForce(new Vector2(0, jumpHight * CurrentAthleticsModifyer / 3), ForceMode2D.Impulse);
             }
+            player.SetSwordActive();
         }
 
         public void GetOffKite()

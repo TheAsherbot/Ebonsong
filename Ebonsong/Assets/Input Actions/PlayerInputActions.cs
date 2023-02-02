@@ -62,6 +62,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sword"",
+                    ""type"": ""Value"",
+                    ""id"": ""7a3ef74e-16f8-4402-8e1a-c176cc4f006b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -194,6 +203,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5a9f89ab-6906-41b1-aca9-6900c7a40ea9"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sword"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -400,6 +420,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_LandMovement_Sprint = m_LandMovement.FindAction("Sprint", throwIfNotFound: true);
         m_LandMovement_Jump = m_LandMovement.FindAction("Jump", throwIfNotFound: true);
         m_LandMovement_Attack = m_LandMovement.FindAction("Attack", throwIfNotFound: true);
+        m_LandMovement_Sword = m_LandMovement.FindAction("Sword", throwIfNotFound: true);
         // AllTerain
         m_AllTerain = asset.FindActionMap("AllTerain", throwIfNotFound: true);
         m_AllTerain_Interact = m_AllTerain.FindAction("Interact", throwIfNotFound: true);
@@ -473,6 +494,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_LandMovement_Sprint;
     private readonly InputAction m_LandMovement_Jump;
     private readonly InputAction m_LandMovement_Attack;
+    private readonly InputAction m_LandMovement_Sword;
     public struct LandMovementActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -481,6 +503,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Sprint => m_Wrapper.m_LandMovement_Sprint;
         public InputAction @Jump => m_Wrapper.m_LandMovement_Jump;
         public InputAction @Attack => m_Wrapper.m_LandMovement_Attack;
+        public InputAction @Sword => m_Wrapper.m_LandMovement_Sword;
         public InputActionMap Get() { return m_Wrapper.m_LandMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -502,6 +525,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Attack.started -= m_Wrapper.m_LandMovementActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_LandMovementActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_LandMovementActionsCallbackInterface.OnAttack;
+                @Sword.started -= m_Wrapper.m_LandMovementActionsCallbackInterface.OnSword;
+                @Sword.performed -= m_Wrapper.m_LandMovementActionsCallbackInterface.OnSword;
+                @Sword.canceled -= m_Wrapper.m_LandMovementActionsCallbackInterface.OnSword;
             }
             m_Wrapper.m_LandMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -518,6 +544,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
+                @Sword.started += instance.OnSword;
+                @Sword.performed += instance.OnSword;
+                @Sword.canceled += instance.OnSword;
             }
         }
     }
@@ -635,6 +664,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnSword(InputAction.CallbackContext context);
     }
     public interface IAllTerainActions
     {

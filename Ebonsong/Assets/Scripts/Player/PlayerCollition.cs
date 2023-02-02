@@ -33,6 +33,7 @@ namespace PlayerNameSpace
                 {
                     if (playerMovement.IsGrounded)
                     {
+                        player.SetSwordActive();
                         playerMovement.GetOffKite();
                         int childCount = player.transform.childCount;
                         Transform kite = player.transform.GetChild(childCount - 1);
@@ -48,6 +49,7 @@ namespace PlayerNameSpace
             {
                 if (collision.gameObject.GetComponent<Kite>())
                 {
+                    player.SetSwordInactive();
                     playerMovement.isOnKite = true;
                     collision.transform.parent = player.transform;
                     collision.transform.localPosition = new Vector3(0, 5, 0);

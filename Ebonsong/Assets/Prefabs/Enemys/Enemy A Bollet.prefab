@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 522506224336595223}
   - component: {fileID: 522506224336595222}
-  - component: {fileID: -3169187610722043948}
   - component: {fileID: -3851143056270105267}
   - component: {fileID: -6033264701520700228}
+  - component: {fileID: -3169187610722043948}
   m_Layer: 9
   m_Name: Enemy A Bollet
   m_TagString: Untagged
@@ -87,19 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3169187610722043948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522506224336595221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd6ce234092b3a042b6ad0b80edf494d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
 --- !u!61 &-3851143056270105267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +134,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-3169187610722043948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522506224336595221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6ce234092b3a042b6ad0b80edf494d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
