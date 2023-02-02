@@ -18,7 +18,11 @@ namespace PlayerNameSpace
 
         private void Update()
         {
-            transform.right = (GetMousePosition2D() - transform.position);
+            transform.right = GetMousePosition2D() - transform.position;
+            if (player.isLookingRight == false)
+            {
+                transform.right = -transform.right;
+            }
         }
 
         public Vector3 GetMousePosition2D()

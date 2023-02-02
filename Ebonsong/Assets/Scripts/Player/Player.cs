@@ -6,6 +6,8 @@ namespace PlayerNameSpace
 {
     public class Player : MonoBehaviour
     {
+        public bool isLookingRight;
+
         public PlayerInputActions InputActions
         {
             get; 

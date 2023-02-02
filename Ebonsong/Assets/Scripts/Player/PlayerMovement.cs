@@ -214,6 +214,7 @@ namespace PlayerNameSpace
             {
                 rigidbody.velocity = new Vector2(moveDirection.x * speed * CurrentAthleticsModifyer, 0);
                 rigidbody.velocity = new Vector2(Mathf.Clamp(rigidbody.velocity.x, -CurrentSpeed, CurrentSpeed), 0);
+                SetLookDirection();
             }
             else
             {
@@ -227,6 +228,7 @@ namespace PlayerNameSpace
             {
                 rigidbody.velocity = new Vector2(-moveDirection.x * speed * slopeNormalPerpendicular.x * CurrentAthleticsModifyer, -moveDirection.x * speed * slopeNormalPerpendicular.y * CurrentAthleticsModifyer);
                 rigidbody.velocity = new Vector2(Mathf.Clamp(rigidbody.velocity.x, -CurrentSpeed, CurrentSpeed), -moveDirection.x * speed * slopeNormalPerpendicular.y * CurrentAthleticsModifyer);
+                SetLookDirection();
             }
             else
             {
@@ -244,6 +246,7 @@ namespace PlayerNameSpace
             {
                 rigidbody.velocity = new Vector2(moveDirection.x * speed * CurrentAthleticsModifyer, rigidbody.velocity.y);
                 rigidbody.velocity = new Vector2(Mathf.Clamp(rigidbody.velocity.x, -CurrentSpeed, CurrentSpeed), rigidbody.velocity.y);
+                SetLookDirection();
             }
             else
             {
@@ -271,6 +274,20 @@ namespace PlayerNameSpace
             }
             rigidbody.velocity = new Vector2(xVelocity, yVelocity);
 
+        }
+
+        private void SetLookDirection()
+        {
+            if (moveDirection.x < 0)
+            {
+                player.isLookingRight = false;
+                transform.localScale = new Vector3(-0.5f, transform.localScale.y, 1);
+            }
+            else
+            {
+                player.isLookingRight = true;
+                transform.localScale = new Vector3(0.5f, transform.localScale.y, 1);
+            }
         }
 
         private void Jump_started(InputAction.CallbackContext context)

@@ -11,7 +11,7 @@ namespace PlayerNameSpace
         [SerializeField] int damageAmount = 2;
 
         private float speed;
-        private float speedToAttack = 30f;
+        private float speedToAttack = 23f;
         private Vector3 previusPosition;
 
         private void FixedUpdate()
