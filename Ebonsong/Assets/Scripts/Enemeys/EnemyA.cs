@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using PlayerNameSpace;
 using Pathfinding;
@@ -8,6 +7,7 @@ namespace Enemies
 {
     public class EnemyA : MonoBehaviour
     {
+        [SerializeField] private bool isInBossFight = false;
         [SerializeField] private int speed = 10;
         [SerializeField] private GameObject bolletPrefab;
         [SerializeField] private Transform[] moveTransforms;
@@ -71,18 +71,21 @@ namespace Enemies
 
         private void Move()
         {
-            Transform currentMovePoint = moveTransforms[currentMoveTranssformNumber];
-            float pointRechedDistance = 0.2f;
-            if (Vector3.Distance(transform.position, currentMovePoint.position) <= pointRechedDistance)
+            if (isInBossFight == false)
             {
-                currentMoveTranssformNumber++;
-                if (currentMoveTranssformNumber >= moveTransforms.Length)
+                Transform currentMovePoint = moveTransforms[currentMoveTranssformNumber];
+                float pointRechedDistance = 0.2f;
+                if (Vector3.Distance(transform.position, currentMovePoint.position) <= pointRechedDistance)
                 {
-                    currentMoveTranssformNumber = 0;
-                    return;
+                    currentMoveTranssformNumber++;
+                    if (currentMoveTranssformNumber >= moveTransforms.Length)
+                    {
+                        currentMoveTranssformNumber = 0;
+                        return;
+                    }
                 }
+                aiPath.destination = currentMovePoint.position;
             }
-            aiPath.destination = currentMovePoint.position;
         }
 
         private void MoveTowardsPlayer()
@@ -96,7 +99,7 @@ namespace Enemies
             hasSeenPlayer = true;
             isAttacking = true;
 ;
-            float timeTillStartShooting = 3f;
+            float timeTillStartShooting = 1f;
             yield return new WaitForSeconds(timeTillStartShooting);
 
             isShooting = true;

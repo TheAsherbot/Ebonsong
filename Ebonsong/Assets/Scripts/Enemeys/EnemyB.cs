@@ -64,7 +64,7 @@ namespace Enemies
         {
             isAttacking = true;
 
-            float timeTillStartShooting = 3f;
+            float timeTillStartShooting = 1f;
             yield return new WaitForSeconds(timeTillStartShooting);
 
             isShooting = true;

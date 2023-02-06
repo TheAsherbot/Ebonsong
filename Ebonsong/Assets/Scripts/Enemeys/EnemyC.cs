@@ -47,34 +47,38 @@ namespace Enemies
                     playerTransform = collision.transform;
                     StartCoroutine(AttackSequence());
                 }
+                Destroy(GetComponent<CircleCollider2D>());
             }
         }
 
         private void Move()
         {
-            if (isShooting == false)
+            if (moveTransforms != null)
             {
-                Vector3 currentMovePoint = moveTransforms[currentMoveTranssformNumber].position;
-                float pointRechedDistance = 0.2f;
-                currentMovePoint = new Vector3(currentMovePoint.x, startYPosition);
-                if (Mathf.Abs(transform.position.x - currentMovePoint.x) <= pointRechedDistance)
+                if (isShooting == false)
                 {
-                    currentMoveTranssformNumber++;
-                    if (currentMoveTranssformNumber >= moveTransforms.Length)
+                    Vector3 currentMovePoint = moveTransforms[currentMoveTranssformNumber].position;
+                    float pointRechedDistance = 0.2f;
+                    currentMovePoint = new Vector3(currentMovePoint.x, startYPosition);
+                    if (Mathf.Abs(transform.position.x - currentMovePoint.x) <= pointRechedDistance)
                     {
-                        currentMoveTranssformNumber = 0;
-                        return;
+                        currentMoveTranssformNumber++;
+                        if (currentMoveTranssformNumber >= moveTransforms.Length)
+                        {
+                            currentMoveTranssformNumber = 0;
+                            return;
+                        }
                     }
-                }
-                currentMovePoint = new Vector3(currentMovePoint.x, startYPosition);
-                aiPath.destination = currentMovePoint;
-                if (transform.position.x - currentMovePoint.x < 0 && isShooting == false)
-                {
-                    transform.rotation = y180Rotation;
-                }
-                else if (transform.position.x - currentMovePoint.x > 0 && isShooting == false)
-                {
-                    transform.rotation = Quaternion.identity;
+                    currentMovePoint = new Vector3(currentMovePoint.x, startYPosition);
+                    aiPath.destination = currentMovePoint;
+                    if (transform.position.x - currentMovePoint.x < 0 && isShooting == false)
+                    {
+                        transform.rotation = y180Rotation;
+                    }
+                    else if (transform.position.x - currentMovePoint.x > 0 && isShooting == false)
+                    {
+                        transform.rotation = Quaternion.identity;
+                    }
                 }
             }
         }
@@ -106,7 +110,7 @@ namespace Enemies
             hasSeenPlayer = true;
             isAttacking = true;
 
-            float timeTillStartShooting = 3f;
+            float timeTillStartShooting = 1f;
             yield return new WaitForSeconds(timeTillStartShooting);
 
             isShooting = true;

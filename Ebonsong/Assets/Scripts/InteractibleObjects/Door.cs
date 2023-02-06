@@ -21,7 +21,6 @@ public class Door : MonoBehaviour
             if (bottumSprite.localScale.y >= 0 || topSprite.localScale.y <= 0)
             {
                 AstarPath.active.Scan();
-                Debug.Log(5);
                 Destroy(this.gameObject);
             }
         }

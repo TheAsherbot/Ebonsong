@@ -278,7 +278,7 @@ namespace PlayerNameSpace
 
         private void SetLookDirection()
         {
-            if (moveDirection.x < 0)
+            if (moveDirection.x <= 0)
             {
                 player.isLookingRight = false;
                 transform.localScale = new Vector3(-0.5f, transform.localScale.y, 1);

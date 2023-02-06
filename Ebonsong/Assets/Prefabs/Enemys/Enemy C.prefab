@@ -446,6 +446,7 @@ GameObject:
   - component: {fileID: 1533625836873172241}
   - component: {fileID: 1533625836873172247}
   - component: {fileID: 1978514321}
+  - component: {fileID: 3459644056402723164}
   m_Layer: 7
   m_Name: Enemy C
   m_TagString: Untagged
@@ -562,7 +563,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -687,6 +688,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 8
   hpSlider: {fileID: 1989978755}
+--- !u!114 &3459644056402723164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533625836873172244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cddc3e9b2914743842c385c15c82bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - prefab: {fileID: 1458242957901340208, guid: 7a1fe679949cb3741a3399640d0c4622, type: 3}
+    spawnChance: 0.3
+  - prefab: {fileID: 6226709593832148203, guid: 4d373f20fee2176489fe78a81f7341f9, type: 3}
+    spawnChance: 0.3
+  - prefab: {fileID: 787050933826527218, guid: c7487db04992c6240a1ed0696a452b8a, type: 3}
+    spawnChance: 0.15
+  - prefab: {fileID: 678588506436509780, guid: 41d1e0dd8866e8042ae45dcd1066f09e, type: 3}
+    spawnChance: 0.15
+  - prefab: {fileID: 3610645948839717582, guid: 1f95b0538cdcf254ba0d4342994acab5, type: 3}
+    spawnChance: 0.1
 --- !u!1 &1533625837154348256
 GameObject:
   m_ObjectHideFlags: 0

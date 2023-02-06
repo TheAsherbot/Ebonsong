@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -10,6 +11,7 @@ namespace PlayerNameSpace
         [SerializeField] private int femaleHPMax = 15;
         [SerializeField] private TextMeshProUGUI maleHPText;
         [SerializeField] private TextMeshProUGUI femaleHPText;
+        [SerializeField] private TextMeshProUGUI livesText;
 
         private int maleHP;
         private int femaleHP;
@@ -26,6 +28,13 @@ namespace PlayerNameSpace
             maleHP = maleHPMax;
             femaleHP = femaleHPMax;
             SetHpText();
+            StartCoroutine(LateStart());
+        }
+
+        private IEnumerator LateStart()
+        {
+            yield return new WaitForFixedUpdate();
+            livesText.text = GameManager.Instance.playerLives.ToString();
         }
 
         public void Heal(int healAmount)
@@ -81,6 +90,7 @@ namespace PlayerNameSpace
         public void AddLives(int addAmount)
         {
             GameManager.Instance.playerLives += addAmount;
+            livesText.text = GameManager.Instance.playerLives.ToString();
         }
 
         private void SetHpText()
