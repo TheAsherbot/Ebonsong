@@ -11,8 +11,8 @@ namespace PlayerNameSpace
         
         [SerializeField] private float speed = 4;
         [SerializeField] private float jumpHight = 16;
-        [SerializeField] private float femaleAthleticsModifyer = 1.5f;
-        [SerializeField] private float maleAthleticsModifyer = 1f;
+        [SerializeField] private float femaleAthleticsModifyer = 1f;
+        [SerializeField] private float maleAthleticsModifyer = 1.5f;
 
         [Header("Slopes")]
         [SerializeField] private float maxSlopeAngle = 50f;
